@@ -1,0 +1,95 @@
+/* Responsive voi cac Breakpoints */
+/* Tren giao dien Tablet (768px ≤ Screen (Medium) < 992px) */
+
+@media screen and (max-width: 991.98px) {
+	#navbar .container .avatar img {
+		/* Hinh anh dai dien an di tren giao dien Tablet (Screen-Width < 992px) */
+		display: none;
+	}
+
+	#navbar .container .profile-name {
+		/* Phan thong tin ho ten an di tren giao dien Tablet (Screen-Width < 992px) */
+		display: none;
+	}
+
+	#certificate .container img {
+		margin-bottom: 1rem; /* Margin Bottom nay cho phep tao khoang trang gian cach voi phan van ban se xep chong phia duoi khi thu nho khong gian hien thi man hinh */
+	}
+
+	#project .container .project-detail .col-md-9:last-child {
+		/* Khi cac phan tu xep chong len nhau thi chi can duy tri margin-bottom cho mot trong so phan tu con trong khoi de khoang gian cach duoc deu nhau */
+		margin-bottom: 0.75rem;
+	}
+
+	/* Phan dinh dang cho Project Charter */
+	#project-charter .container .project-box .goals .row-cols-2 {
+		/* Giam khoang cach voi duong border-bottom cua ca tieu de Goals de tang khoang cach padding-top cho lop .goals-icon ben duoi thi khoang gian cach tong cong khong doi */
+		margin-top: 0.25rem;
+	}
+	#project-charter .container .project-box .goals .goals-info {
+		padding-left: 0.75rem;
+	}
+	#project-charter .container .project-box .goals .goals-icon {
+		padding-top: 0.75rem; /* Gian khoang cach voi phan border*/
+	}
+	#project-charter .container .project-box .team .row-cols-2,
+	#project-charter .container .project-box .primary .row-cols-2 {
+		/* Chinh lai khoang cach padding-left, padding-right cho cac phan van ban duoc can chinh dong deu voi cac phan noi dung khac tren trang */
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+	#project-charter .container .project-box .primary .row-cols-2 p {
+		margin-top: 0.5rem; /* Gian khoang cach phan van ban voi icon khi chung xep chong len nhau */
+	}
+	.timeline button {
+		margin-left: 0.75rem; /* Can le trai cho cac button thang voi phan van ban phia duoi */
+	}
+	#project-charter .container .project-box .timeline .col-lg-10 .date-time {
+		padding-left: 0.75rem; /* Chinh lai khoang cach padding-left cho cac phan van ban duoc can chinh dong deu voi cac phan noi dung khac tren trang */
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	#project .container .project-detail {
+		/* Lam tuong tu voi phan o tren */
+		min-height: 77%;
+	}
+}
+
+/* Tren giao dien Laptop va Tablet khi thu nho trinh duyet (576 ≤ Giao dien < 768px) */
+
+@media screen and (max-width: 767.98px) {
+	.header-container {
+		/* Dat chieu cao co dinh cho header-container khi thu nho chieu rong trinh duyet nho hon 768px de dat thuoc tinh object-fit: cover; cho image nhu o ben duoi */
+		height: 356px;
+	}
+
+	.header-container img {
+		/* Su dung object-fit: cover; de Crop hinh anh theo kich thuoc chieu cao bang voi chieu cao header-container da thiet lap o tren
+		phan chieu rong se duoc Crop phu hop voi kich thuoc cua trinh duyet khi thu nho */
+		height: 100%;
+		object-fit: cover;
+	}
+
+	#banner {
+		padding: 50px 0; /* Loai bo Padding left và right khi thu nho chieu rong trinh duyet duoi 768px de chieu rong Banner khong thu hep va van ban ben trong Banner khong Wrap text */
+	}
+
+	#project .container .project-detail button,
+	#project .container .project-detail .col-md-9 .d-flex {
+		margin-left: 1rem; /* Dat margin-left cho cac phan tu khi chung xep chong len nhau o khong gian hien thi thu nho */
+	}
+}
+
+@media screen and (min-width: 576px) {
+	#certificate .container .box-2 {
+		border-left: 1px solid #9f8ece; /* Tren giao dien Laptop va Tablets Border-left cua phan Chung chi JavaScript xuat hien */
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+	#project .container .project-detail {
+		/* Lam tuong tu voi phan o tren */
+		min-height: 87%;
+	}
+}

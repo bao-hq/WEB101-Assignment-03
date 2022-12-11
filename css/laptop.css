@@ -1,0 +1,693 @@
+* {
+	/* Thiet lap thuoc tinh chung cho bo chon pho quat */
+	font-family: "Open Sans", sans-serif; /* Su dung font chu uu tien la Open Sans, font thay the la sans-serif */
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+/*
+  SPACING SYSTEM (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+  1rem = 16px
+    
+  FONT SIZE SYSTEM (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* Cac Break Point su dung trong du an
+Extra Large : xl : 1200px
+Large : lg ≥ 992px
+Medium : md ≥ 768px
+Small : sm ≥ 576px
+Extra Small : < 576px */
+
+/* Mau su dung cho trang Digital-CV */
+/* MAIN COLOR 1 : #228be6 */
+/* MAIN COLOR 2 : rgb(124, 161, 230) */
+/* GREY COLOR 1 : rgb(58, 58, 110) */
+/* GREY COLOR 2 : rgb(77, 77, 97) */
+/* GREY COLOR 3 : #9f8ece
+/* GREY COLOR 4 : #e9ecef */
+/* GREY COLOR 5 : #edf2ff */
+
+/* Mau su dung cho trang Project Charter */
+/* MAIN COLOR 1 : #228be6 */
+/* MAIN COLOR 2 : #364fc7 */
+/* MAIN COLOR 3 : #5c7cfa */
+/* MAIN COLOR 4 : #69db7c */
+/* GREY COLOR 1 : rgb(70, 70, 130) */
+/* GREY COLOR 2 : #d6e1eb */
+/* GREY COLOR 3 : #d0bfff
+/* GREY COLOR 4 : #dee6ee */
+/* GREY COLOR 5 : #91a7ff*/
+
+section .container {
+	max-width: 1200px; /* Dat kich thuoc trang rong nhat la 1200px */
+	margin: auto; /* Dat margin:auto cho phep giao dien trang Web hien thi giua tren man hinh kich thuoc lon */
+	display: block;
+	padding: 30px 50px;
+}
+
+.container h2 {
+	/* Dinh dang font chu va cac thuoc tinh margin chung cho phan tu tieu de h2 */
+	font-size: 24px;
+	margin: 1rem 0;
+	padding-left: 0.5rem;
+	color: rgb(77, 77, 97); /* Cac the h2 co chu may rgb(77, 77, 97) */
+}
+
+.container h3 {
+	/* Dinh dang font chu va cac thuoc tinh margin chung cho phan tu tieu de h3 */
+	font-size: 14px;
+	line-height: 1.4;
+	margin-top: 0.5rem;
+	margin-bottom: 0.75rem;
+	color: rgb(58, 58, 110); /* Cac the h3 co chu mau rgb(58, 58, 110) */
+}
+
+section .container p,
+section .container ul,
+section .container li,
+section .container table {
+	/* Dinh dang co chu va khoang cach dong cho cac phan tu noi dung van ban cua trang Web */
+	font-size: 12px;
+	line-height: 1.6;
+	color: rgb(58, 58, 110); /* Cac the h3 co chu mau rgb(58, 58, 110) */
+}
+
+ul {
+	list-style-type: none; /* Khong su dung dau o dau dong cho cac the ul, li */
+}
+
+.bg-grey .container {
+	background-color: #edf2ff; /* To mau #edf2ff cho cac phan container co class="bg-grey" */
+}
+
+/* Phan Banner */
+
+.header-container {
+	max-width: 1200px;
+	height: 100%; /* Dat don vi 100% la chieu cao 100% kich thuoc khung nhin */
+	position: relative; /* Tao thuoc tinh relative de Set vi tri position:absolute cho phan banner ben trong */
+	text-align: center; /* Can giua cho hinh anh va van ban trong header-container */
+	margin: auto; /* Dat margin:auto cho phep giao dien trang Web hien thi giua tren man hinh kich thuoc lon */
+	display: block;
+}
+
+.header-container img {
+	width: 100%; /* Dat kich thuoc chieu rong hinh anh bang 100% kich thuoc phan khong gian header-container */
+}
+
+#banner {
+	position: absolute;
+	text-align: center;
+	padding: 50px;
+	top: 40%; /* Di chuyen vi tri cua phan tu con theo chieu doc mot khoang 40% chieu cao phan tu me */
+	left: 50%; /* Di chuyen vi tri cua phan tu con theo chieu ngang mot khoang 50% chieu cao phan tu me */
+	transform: translate(
+		-50%,
+		-50%
+	); /* Transform top, left -50%*, -50% so voi kich thuoc phan tu con */
+}
+
+/* Dinh dang cho phan van ban trong Banner va chuyen ve chu mau trang */
+
+#banner h1 {
+	font-size: 30px;
+	margin: 0px;
+	padding: 8px;
+	color: #fff;
+}
+
+#banner span {
+	font-size: 14px;
+	margin: 0px;
+	padding: 4px;
+	color: #fff;
+}
+
+/* Phan Navbar */
+
+#navbar .container {
+	position: relative; /* Dat thuoc tinh position: relative; de dieu chinh vi tri position: absolute; cho #avata nam trong navbar */
+	text-align: center; /* Can giua cho cac phan noi dung ben trong container */
+	padding: 12px 48px;
+}
+
+#navbar .container .avatar img {
+	position: absolute;
+	top: 50%; /* Di chuyen vi tri cua phan tu avata theo chieu doc mot khoang 50% chieu cao phan tu me #nav-bar .container */
+	left: 50%; /* Di chuyen vi tri cua phan tu avata theo chieu ngang mot khoang 50% chieu cao phan tu me #nav-bar .container */
+	transform: translate(
+		-50%,
+		-50%
+	); /* Transform top, left -50%*, -50% so voi kich thuoc phan tu avata */
+	border: 5px solid #fff; /* Dat duong vien mau trang cho buc anh avata */
+	border-radius: 50%; /* Dat border-radius de bo tron duong vien buc anh avata */
+	/*display: none;*/
+}
+
+#navbar .container h2 {
+	font-size: 20px; /* Dinh dang co chu cho ho ten tren Menu */
+	padding: 0;
+}
+
+.container a {
+	font-size: 14px; /* Dinh dang font-size 14px cho cac the a trong Menu */
+	text-decoration: none; /* Loai bo phan gach chan cua lien ket a */
+	text-transform: uppercase; /* Chuyen thanh chu in hoa */
+}
+
+a:link,
+a:visited {
+	/* Chon mau cho chu tren menu */
+	text-align: center;
+	color: rgb(77, 77, 97);
+	padding: 12px 8px;
+}
+a:hover,
+a:active {
+	/* Trang tri cho menu khi di chuot va nhap chuot vao */
+	background-color: #228be6; /* Khi di chuot va nhap chuot vao the a hien mau xanh */
+	color: #fff; /* Khi di chuot va nhap chuot vao van ban trong the a hien chu mau trang */
+}
+
+.icon-user,
+.icon-doc-text-inv,
+.icon-mail-alt,
+.icon-star-1 {
+	color: #228be6; /* To mau cho Icon tren menu */
+}
+
+/* Phan thong tin ca nhan va muc tieu nghe nghiep */
+
+#about .container h2 {
+	margin-left: 1.5rem;
+}
+
+#about .container p {
+	/* Can chinh cho phan muc tieu nghe nghiep */
+	margin-top: 1.5rem;
+	margin-left: 2rem;
+}
+
+#about .container .d-flex {
+	/* Can le trai cho khoi flex-box chua cac icon trong thong tin ca nhan */
+	margin-left: 2rem;
+}
+
+#about .container ul {
+	/* Can chinh cho phan noi dung thong tin ca nhan */
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	margin-left: 0.25rem;
+}
+
+#about .container i {
+	/* To mau va gian khoang cach cho cac icon trong thong tin ca nhan */
+	color: #228be6;
+	margin-right: 0.5rem;
+}
+
+/* Phan thong tin nghe nghiep */
+
+#job-info .container .col-3 i {
+	/* Dinh dang kich thuoc va mau sac cho logo i */
+	font-size: 32px;
+	color: rgb(124, 161, 230);
+}
+
+.container .col-lg-4 .box {
+	height: 100%; /* Thuoc tinh Height : 100%; cho phep cac box chua noi dung ben trong co chieu cao bang chieu cao vung khong gian chua no */
+	border: 1px solid #e9ecef;
+	padding: 1rem; /* Ca phan tu noi dung ben trong cach border bao quanh la 16px */
+}
+
+.dot {
+	/* Can chinh cho ky tu cham dau dong bao gom mau xanh, set border radius thanh hinh tron, can chinh margin de dua chung thang hang voi phan van ban ben canh */
+	width: 8px;
+	height: 8px;
+	background-color: #228be6;
+	border-radius: 50%;
+	border: 1px solid #228be6;
+	margin: 0.75rem 0.25rem 0 1rem;
+	display: inline-block;
+}
+
+.time {
+	font-style: italic; /* Dat kieu chu in nghieng cho cac moc thoi gian */
+}
+
+.time button {
+	background-color: #228be6; /* To mau xanh cho nut "Hien tai" */
+	color: #fff; /* Dinh dang mau trang cho thanh phan ben trong */
+	font-style: italic; /* Font chu in nghieng */
+	border: none; /* Loai bo duong vien */
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	border-radius: 6px;
+}
+
+.col-1 {
+	padding: 0px;
+}
+
+#job-info .container .hobbies button {
+	/* Trang tri cho cac nut button chua cac icon trong hobbies */
+	background-color: #fff; /* Nen mau trang */
+	width: 48px;
+	height: 48px;
+	border: 1px solid #228be6; /* Duong vien co cung mau xanh giong cac icon */
+	border-radius: 50%; /* Bo tron duong vien thanh hinh tron */
+}
+
+#job-info .container .hobbies button i {
+	/* Dat co chu va to mau cho cac Icon mieu ta so thich */
+	font-size: 18px;
+	color: #228be6;
+}
+
+#job-info .container .hobbies p {
+	/* Dat co chu va to mau cho cac Icon mieu ta so thich */
+	padding-top: 0.75rem;
+}
+
+/* Dinh dang cho phan Hobbies, Languages va Skill. Dat padding-left de phan noi dung co le trai hop ly */
+
+#job-info .hobbies .box h2,
+#job-info .languages .box h2,
+#job-info .skill .box h2 {
+	padding: 0;
+}
+
+#job-info .hobbies .box,
+#job-info .languages .box,
+#job-info .skill .box {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+#job-info .container .first-line {
+	padding-top: 0.5rem; /* Su dung mot Class rieng de dieu kien nay duoc uu tien hon dieu kien cua cac phan tu da duoc thiet lap san trong Bootstrap
+  Khoang trang nay de tao gian cach cho dong dau cua phan Ky nang va phan Ngon ngu duoc can chinh hop ly so voi cac phan xung quanh */
+}
+
+/* Dinh dang khoang trong khong bi ngat thanh cac doi tuong co chieu rong 2px chieu dai 40px de to mau cho thang diem tieng Anh va tieng Nhat o ben duoi */
+
+.eng-score span,
+.jlpt-score span {
+	display: inline-block;
+	height: 2px;
+	margin-right: 10px;
+	width: 40px;
+}
+
+/* Su dung phan tu peseudo-classes de to mau cho phan thang diem tieng Anh */
+
+.eng-score span:first-child,
+.eng-score span:nth-child(2) {
+	background: #228be6; /* Phan tu con thu nhat và thu hai duoc to mau xanh */
+}
+
+.eng-score span:last-child {
+	background: #e9ecef; /* Phan tu con cuoi cung (thu ba) duoc to mau #e9ecef */
+}
+
+/* Su dung phan tu peseudo-classes de to mau cho phan thang diem tieng Nhat */
+
+.jlpt-score span:first-child {
+	background: #228be6; /* Phan tu con thu nhat duoc to mau xanh */
+}
+
+.jlpt-score span:nth-child(2),
+.jlpt-score span:last-child {
+	background: #e9ecef; /* Phan tu con thu hai va cuoi cung (thu ba) duoc to mau #e9ecef */
+}
+
+/* Lam tuong tu voi phan to mau cho thang diem tieng Anh va tieng Nhat o tren de to mau cho thang diem HTML/CSS, Javascript, NodeJS va Bootstrap 5 o duoi */
+
+.html-css-level span,
+.javascript-level span,
+.nodejs-level span,
+.bootstrap5-level span {
+	display: inline-block;
+	height: 2px;
+	margin-right: 10px;
+	width: 45px;
+}
+
+.html-css-level span:first-child,
+.bootstrap5-level span:first-child {
+	background: #228be6; /* Phan tu con thu nhat duoc to mau xanh */
+}
+
+.html-css-level span:nth-child(2),
+.html-css-level span:last-child,
+.bootstrap5-level span:nth-child(2),
+.bootstrap5-level span:last-child {
+	background: #e9ecef; /* Phan tu con thu hai va cuoi cung (thu ba) duoc to mau #e9ecef */
+}
+
+.javascript-level span:first-child,
+.javascript-level span:nth-child(2),
+.nodejs-level span:first-child,
+.nodejs-level span:nth-child(2) {
+	background: #228be6; /* Phan tu con thu nhat va thu hai duoc to mau xanh */
+}
+
+.javascript-level span:last-child,
+.nodejs-level span:last-child {
+	background: #e9ecef; /* Phan tu con cuoi cung (thu ba duoc to mau #e9ecef */
+}
+
+/* Phan Chung chi - Giai thuong */
+
+#certificate .container {
+	margin-top: 1rem;
+}
+
+#certificate .container img {
+	/* Dat kich thuoc hinh anh bang 100% kich thuoc cua vung khong gian bao quanh no
+	Khi phong to thu nho phan khong gian bao quanh thi hinh anh se phong to thu nho bang 100% phan khong gian do */
+	width: 100%;
+}
+
+#certificate .container .col-sm-6 h3 {
+	/* Dinh dang phan tieu de cho cac chung chi */
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 0;
+}
+
+#certificate .container .col-sm-6:first-child,
+#certificate .container .col-sm-6:nth-child(2) {
+	/* Su dung phan tu pseudo-class de ke border-bottom cho muc chung chi Web va chung chi Javascrip */
+	border-bottom: 1px solid #9f8ece;
+}
+
+#certificate .container .box-2 {
+	/* Su dung mot Class rieng cho phan noi dung se dat border-left de tao khoang trang gian cach chung so voi phan border-bottom */
+	margin-bottom: 1rem;
+}
+
+/* Phan Du an */
+
+#project .container img {
+	/* Dat kich thuoc hinh anh bang 100% kich thuoc cua vung khong gian bao quanh no
+	Khi phong to thu nho phan khong gian bao quanh thi hinh anh se phong to thu nho bang 100% phan khong gian do */
+	width: 100%;
+}
+
+#project .container .project-detail {
+	border: 1px solid #e9ecef;
+	padding: 0rem;
+	min-height: 55%; /* Dat chieu cao cho phan project-detail theo % chieu cao vung khong gian chua no de phan border xung quanh cua cac cot trong Grid-Layout deu hien thi chieu cao bang nhau */
+}
+
+#project .container .project-detail h3 {
+	margin: 1rem 0.75rem;
+	text-transform: uppercase; /* Chuyen ten cac du an tu chu thuong thanh chu in hoa */
+	font-weight: bold;
+}
+
+#project .container .project-detail h3 a {
+	padding: 0.25rem 0;
+}
+
+#project .container .project-detail button {
+	background-color: #228be6; /* To mau xanh cho nut "2021" */
+	border: none; /* Loai bo duong vien */
+	margin-top: 0.75rem;
+	margin-left: 0.5rem;
+	padding: 0.25rem 0.5rem;
+	border-radius: 12px; /* Bo goc tron cho button */
+}
+
+#project .container .project-detail button .year {
+	font-size: 11px;
+	color: #fff; /* Dinh dang mau trang cho thanh phan van ban ben trong */
+	margin-bottom: 0;
+}
+
+#project .container .project-detail .box-3 {
+	/* Su dung 1 Class rieng de quan ly border-bottom cho phan tieu de h3 ben trong cac du an */
+	border-bottom: 1px solid #e9ecef;
+}
+
+#project .container .project-detail .d-flex {
+	align-items: center;
+	margin-top: 0.75rem;
+	/*margin-bottom: 0.75rem;*/
+}
+
+#project .container .project-detail .col-sm-3 {
+	/* Can dua phan nay vao @Media query */
+	margin-left: 0.5rem;
+}
+
+#project .container .project-detail .d-flex p {
+	margin-bottom: 0;
+	padding-left: 0.5rem;
+}
+
+#project .container .project-detail i {
+	color: rgb(
+		124,
+		161,
+		230
+	); /* To mau rgb(124, 161, 230) de lam mo cac icon trong menu */
+}
+
+table tbody tr th {
+	/* Dinh dang chieu rong, can chinh noi dung chu to duong vien cho phan tieu de cua bang */
+	width: 25%;
+	text-align: start;
+	font-weight: normal;
+	vertical-align: top;
+	padding: 8px 0px 8px 8px;
+	border-top: 1px solid #e9ecef;
+}
+
+table tbody tr td {
+	/* Dinh dang can chinh noi dung chu to duong vien cho phan data cua bang */
+	padding: 8px 8px 8px 0px;
+	border-top: 1px solid #e9ecef;
+}
+
+/* Phan Footer */
+
+#footer .container ul li {
+	padding-right: 1rem;
+}
+
+#footer .container ul button {
+	width: 24px;
+	height: 24px;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	background-color: #228be6; /* To nen mau xanh cho nut button chua icon cua cac ung dung mang xa hoi */
+	color: #fff; /* To mau trang cho cac icon */
+	border: none; /* Loai bo border cua button */
+	border-radius: 50%; /* Bo tron cho nut button chua cac icon */
+}
+
+#footer .container ul li span {
+	padding-top: 0.25rem;
+}
+
+#footer .container ul button i {
+	font-size: 16px; /* dinh dang font-size cho cac icon */
+}
+
+/* Phan Project Charter */
+
+#project-charter .container .project-box {
+	/* Phan nay de tao duong bao xung quanh cac khoi Goals, Team, Scopes, Primary và Timeline ben trong */
+	background-color: #5c7cfa;
+	padding: 0.25rem 0.75rem 0.75rem 0.75rem;
+}
+
+#project-charter .container .project-box .goals .row-cols-2 {
+	/* Gian khoang cach voi duong border-bottom cua cac tieu de Goals */
+	margin-top: 0.5rem;
+}
+
+#project-charter .container .project-box .team .row-cols-2,
+#project-charter .container .project-box .scopes .row-cols-2,
+#project-charter .container .project-box .primary .row-cols-2 {
+	/* Gian khoang cach voi duong border-bottom cua cac tieu de Team, Scopes, Primary*/
+	margin-top: 1rem;
+}
+
+#project-charter .container .project-box .timeline .row-cols-2 {
+	/* Gian khoang cach voi duong border-bottom cua tieu de Timeline */
+	margin-top: 0.5rem;
+}
+
+#project-charter .container .project-box h2 {
+	/* Dinh dang cho phan tu tieu de va ke duong border-bottom ngan cach chung voi cac phan tu noi dung ben duoi */
+	margin: 0;
+	margin-left: -0.5rem;
+	padding-top: 0.25rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #d6e1eb;
+}
+
+#project-charter .container .project-box h2 a {
+	/* Dinh dang cho phan tu link tieu de */
+	font-size: 20px;
+	margin-left: 0;
+}
+
+#project-charter .container .project-box a:link,
+#project-charter .container .project-box a:visited {
+	/* Dinh dang mau chu va font chu */
+	padding: 0.5rem 0.5rem;
+	color: #364fc7; /* Chu co mau xanh */
+	text-transform: none; /* Khong chuyen doi thanh chu in hoa */
+}
+
+#project-charter .container .project-box a:hover,
+#project-charter .container .project-box a:active {
+	/* Trang tri cho link khi di chuot va nhap chuot vao */
+	background-color: #228be6; /* Khi di chuot va nhap chuot vao the a hien mau xanh */
+	color: #fff; /* Khi di chuot va nhap chuot vao van ban trong the a hien chu mau trang */
+}
+
+#project-charter .container .project-box h3 {
+	margin-top: 0; /* Loai bo margin-top da dinh dang truoc do o phan digital-cv */
+}
+
+#project-charter .container .project-box .scopes h3 {
+	font-size: 16px;
+	font-weight: 700;
+	color: rgb(70, 70, 130);
+}
+
+#project-charter .container .project-box i {
+	/* Thiet lap dinh dang cho icon */
+	color: #228be6;
+	margin-top: 0;
+}
+
+#project-charter .container .project-box .goals .goals-info {
+	padding-top: 0.5rem;
+	border-bottom: 1px solid #dee6ee;
+}
+
+#project-charter .container .project-box .goals .goals-info p {
+	margin-top: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+#project-charter .container .project-box .timeline .col-lg-2,
+#project-charter .container .project-box .timeline .col-lg-10 {
+	margin-top: 0.5rem;
+}
+
+#project-charter .container .project-box .timeline .col-lg-10 .date-time {
+	padding-left: 0.5rem;
+	border-bottom: 1px dashed #69db7c; /* Ke duong gach chan cho phan van ban trong timeline */
+}
+
+#project-charter .container .project-box .timeline .col-lg-10 p {
+	margin-top: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+/* Thiet lap cac dinh dang background-color cho cac lop Goals, Team, Scopes, Primary và Timeline de ghi de mau sac len lop project-box
+Cac thuoc tinh height : 100%; cho phep chung chiem 100% chieu cao cua vung khong gian container cua chung
+Cac padding cho phep chung tao ra khoang cach giua phan van ban ben trong voi duong bao ben ngoai */
+
+.goals {
+	background-color: white;
+	height: 100%;
+	padding: 0.75rem;
+}
+
+.team {
+	background-color: white;
+	height: 100%;
+	padding: 0.75rem;
+}
+
+.scopes {
+	background-color: white;
+	height: 100%;
+	padding: 0.75rem;
+}
+
+.primary {
+	background-color: white;
+	height: 100%;
+	padding: 0.75rem;
+}
+.scopes .row-cols-2 {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+.timeline {
+	background-color: white;
+	height: 100%;
+	padding: 0.75rem;
+}
+
+.timeline button {
+	/* Dinh dang cho cac so thu tu trong phan Timeline gom co chu, mau nen, mau chu, kich thuoc va duong bao, bo tron cho phan tu button */
+	font-size: 18px;
+	background-color: #d0bfff;
+	color: #fff;
+	width: 36px;
+	height: 36px;
+	border: 1px solid #91a7ff;
+	border-radius: 50%;
+}
+
+/* Responsive voi cac Breakpoints */
+
+/* Tren giao dien Laptop (Screen ≥ 992px) */
+
+@media screen and (min-width: 992px) {
+	#project .container .project-detail .col-md-9:first-child,
+	#project .container .project-detail .col-md-9:last-child {
+		/* Su dung pseudo-classes de gian khoang cach margin-bottom cho cac phan tu con trong khoi
+		Truong hop nay cho phep chung hoat dong doc lap voi cac thuoc tinh duoc thiet lap san trong cac luoi cua Bootstrap
+		Khi hien thi o trinh duyet nho hon thi co the de dang thiet lap thuoc tinh cho rieng le tung phan tu con trong khoi nhu o ben duoi */
+		margin-bottom: 0.75rem;
+	}
+	/*Phan dinh dang cho Project Charter */
+	/* Dich chuyen margin theo khoang cach am de khoang ngan cach giua cac cot trong Grid Layout khong qua xa nhau */
+	.goals,
+	.scopes {
+		margin-right: -0.5rem;
+	}
+	.team,
+	.primary {
+		margin-left: -0.5rem;
+		margin-right: -0.5rem;
+	}
+	.timeline {
+		margin-left: -0.5rem;
+	}
+
+	#project-charter .container .project-box .goals .goals-icon {
+		height: 100%;
+		margin-right: -0.75rem; /* Dat margin -0.75rem cho phep le ben phai cua lop goals-icon dich chuyen vao phan khoang trang ngan cach giua hai cot trong luoi cua Bootstrap
+    Viec lam nay la khi ke duong border-bottom thi duong border cua lop .goals-icon va border cua lop goals-info duoc noi lien nhau */
+		padding-top: 0.75rem;
+		padding-right: 0.75rem; /* Dat padding right 0.75rem cho phep dich chuyen margin sang phai 0.75rem nhung vi tri van ban khong dich chuyen */
+		border-bottom: 1px solid #dee6ee;
+	}
+	#project-charter .container .project-box .goals .goals-info {
+		margin-left: -0.75rem; /* Lam tuong tu nhu lop .goals-icon. Dich chuyen margin-left cua lop .goals-info sang phai 0.75rem de chung cham toi margin-right cua lop .goals-icon
+    Khi dat border-bottom cho chung thi border cua 2 lop nay noi lien nhau */
+		padding-left: 0.5rem;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	#project .container .project-detail {
+		/* Dat chieu cao hien thi phu hop cho duong bao cua cac cot chua noi dung trong Grid-Layout khi thu nho trinh duyet theo cac khoang Breakpoints */
+		min-height: 63%;
+	}
+}

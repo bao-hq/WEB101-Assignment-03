@@ -1,0 +1,41 @@
+/* Responsive voi cac Breakpoints */
+/* Tren giao dien Mobile < 576px */
+
+@media screen and (max-width: 575.98px) {
+	#navbar .container .d-flex {
+		/* Can le trai cho cac phan tu trong Navbar khi chung xep chong len nhau tren giao dien Mobile */
+		margin-left: 2rem;
+	}
+
+	#certificate .container .box-2 {
+		border-left: none; /* Border-left cua phan Chung chi JavaScript an di tren giao dien Mobile */
+	}
+
+	#project .container .project-detail {
+		/* Tren giao dien Mobile, phan khong gian chua noi dung duoc xep chong len nhau va khong chia thanh 3 cot vi vay chieu cao cua chung dat thanh Auto */
+		height: auto;
+	}
+
+	#footer .container ul li {
+		padding-right: 0rem; /* tren giao dien Mobile phan khoang cach giua cac icon thu hep lai */
+	}
+
+	#footer .container ul li span {
+		display: none; /* Tren giao dien Mobile phan ten mang xa hoi an di chi con lai cac icon */
+	}
+}
+
+@media (min-width: 502.98px) and (max-width: 575.98px) {
+	#project .container img {
+		/* Trong khoang nay hinh anh va table hien thi chen len nhau
+		Can dat Border-top cho hinh anh thay cho border-bottom cua table (muc dich cua doan Code nay la sua loi hien thi) */
+		border-top: 1px solid #e9ecef;
+	}
+}
+
+@media (min-width: 270px) and (max-width: 575.98px) {
+	/* Khoang Break point nay la de dat kich thuoc chieu rong phan Banner khong doi lam cho phan van ban ben trong no khong chuyen trang thai Wrap Text khi thu nho chieu rong trinh duyet trong khoang nay */
+	#banner {
+		width: 251.36px;
+	}
+}
