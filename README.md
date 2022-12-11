@@ -44,6 +44,7 @@ Assignment 03 Stater
 │  ├─ project_1.png
 │  ├─ project_2.png
 │  └─ project_3.png
-└─ index.html
+├─ digital-cv.html
+└─ project-charter.html
 
 ```
